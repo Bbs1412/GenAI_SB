@@ -19,7 +19,7 @@ def generate_questions(model_name, text):
     try:
         response = palm.generate_text(
             model=model_name,
-            prompt=f"Generate questions from the following text:\n\n{text}\n\nQuestions:",
+            prompt=f"Generate questions from the following text:\n\n {text} \n\n Questions:",
             max_output_tokens=150
         )
         questions = response.result.strip() if response.result else "No questions generated."
