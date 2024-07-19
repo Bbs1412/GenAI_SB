@@ -1,0 +1,9 @@
+streamlit==1.10.0
+google-generativeai
+langdetect==1.0.9
+googletrans==4.0.0-rc1
+httpx==0.13.3
+altair==4.1.0
+vega-datasets
+vega
+python-dotenv
