@@ -13,6 +13,23 @@ api_key = os.getenv("PALM_API_KEY")
 palm.configure(api_key=api_key)
 translator = Translator()
 
+# Initialize the Palm Text-Bison-001 Model
+class TextBisonModel:
+    def __init__(self):
+        # List available models and select one
+        self.models = [model for model in palm.list_models()]
+        if len(self.models) > 1:
+            # Select the text-bison model
+            self.model_name = self.models[1].name
+        else:
+            st.error("No models found. Please check your API configuration.")
+            st.stop()
+
+    def generate_question(self, text, language):
+        return generate_questions(self.model_name, text)
+
+# Initialize model and translator
+model = TextBisonModel()
 
 # Function to generate questions from text
 def generate_questions(model_name, text):
@@ -28,27 +45,6 @@ def generate_questions(model_name, text):
         questions = "Error generating questions."
 
     return questions
-
-
-# Initialize the Palm Text-Bison-001 Model (pseudo-code as the actual implementation may vary)
-class TextBisonModel:
-    def __init__(self):
-        # List available models and select one
-        self.models = [model for model in palm.list_models()]
-        if len(self.models) > 1:
-            # Select the second model as an example
-            self.model_name = self.models[1].name
-        else:
-            st.error("No models found. Please check your API configuration.")
-            st.stop()
-
-    def generate_question(self, text, language):
-        # Replace with actual model logic to generate questions
-        return generate_questions(self.model_name, text)
-
-
-# Initialize model and translator
-model = TextBisonModel()
 
 
 # Function to structure the Streamlit app
