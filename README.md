@@ -1,7 +1,7 @@
 # `Inquisitive:` AI Powered Multilingual Question Generator
 
 <!-- <hr> -->
-
+&nbsp;&nbsp;&nbsp;&nbsp;
 This repository contains a Generative AI project created using Gemini API.  
 It is a simple multilingual AI powered questions generator based on the news article provided.  
 Project is developed under the `Generative AI Applications using Vertex AI` course by SmartBridge in collaboration with Google.
