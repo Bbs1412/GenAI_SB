@@ -57,6 +57,8 @@ Implement language detection, translation, and question generation using Generat
 
 1. **Output:** The app presents the questions in the original language to the user.
 
+   <img align="center" src="./assets/LLM.png">
+
 ## Implementation
    * Website:
      <img align="center" src="./assets/web_1.png">
